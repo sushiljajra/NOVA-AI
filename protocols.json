@@ -1,0 +1,81 @@
+{
+  "dev": {
+    "description": "Developer Environment: Launches editor, GitHub, and background focus music.",
+    "steps": [
+      {
+        "tool": "launch_application",
+        "args": {
+          "target": "code"
+        }
+      },
+      {
+        "tool": "open_browser",
+        "args": {
+          "url": "https://github.com"
+        }
+      },
+      {
+        "tool": "play_on_youtube",
+        "args": {
+          "query": "lofi hip hop study beats"
+        }
+      }
+    ]
+  },
+  "maintenance": {
+    "description": "System Diagnostic & Clean: Purges temp caches and inspects CPU/RAM vitals.",
+    "steps": [
+      {
+        "tool": "get_system_vitals",
+        "args": {}
+      },
+      {
+        "tool": "list_running_processes",
+        "args": {
+          "limit": 5
+        }
+      },
+      {
+        "tool": "execute_shell_command",
+        "args": {
+          "command": "Remove-Item -Path $env:TEMP\\* -Recurse -Force -ErrorAction SilentlyContinue; Write-Output 'Temporary files purged successfully.'"
+        }
+      }
+    ]
+  },
+  "focus": {
+    "description": "Deep Work Focus Block: Sets volume and arms a 45-minute Pomodoro timer.",
+    "steps": [
+      {
+        "tool": "control_media",
+        "args": {
+          "action": "volume_down",
+          "steps": 4
+        }
+      },
+      {
+        "tool": "set_timer",
+        "args": {
+          "minutes": 45,
+          "label": "Pomodoro Focus Block Finished"
+        }
+      }
+    ]
+  },
+  "night": {
+    "description": "Standby Night Mode: Lowers master audio and checks pending reminders.",
+    "steps": [
+      {
+        "tool": "control_media",
+        "args": {
+          "action": "volume_down",
+          "steps": 8
+        }
+      },
+      {
+        "tool": "list_active_reminders",
+        "args": {}
+      }
+    ]
+  }
+}

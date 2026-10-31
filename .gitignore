@@ -1,0 +1,40 @@
+# Python bytecode & cache
+__pycache__/
+*.py[cod]
+*$py.class
+*.so
+
+# Environments
+.venv/
+env/
+venv/
+ENV/
+
+# Sensitive Environment Variables (NEVER COMMIT API KEYS)
+.env
+
+# Local Databases & Logs
+*.db
+*.log
+nova_memory.db
+eclipse_memory.db
+
+# Temporary Media & Screenshots
+*.mp3
+*.wav
+*.png
+*.jpg
+temp_*
+
+# IDE & Editor settings
+.vscode/
+.idea/
+*.sublime-project
+*.sublime-workspace
+
+# OS metadata
+Thumbs.db
+ehthumbs.db
+Desktop.ini
+$RECYCLE.BIN/
+.DS_Store
